@@ -19,6 +19,6 @@ int main()
 	printf("Result:%d",fun(a,b));
 	return 0;
 }
-/*Enter First number:100
-Enter second number:20
-Result:5*/
+/*Enter First number:5
+Enter second number:2
+Result:16*/
