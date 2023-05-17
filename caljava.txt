@@ -1,0 +1,108 @@
+package com.example.myapplication;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
+
+public class MainActivity extends AppCompatActivity {
+
+    EditText  mEdit1,mEdit2,mEdit3,mEdit4,mEdit5,Result;
+    String s1,s2,s3,s4,s5;
+ int grade=0;
+ int t=0;
+    public void cal(View view)
+    {
+        t=0;
+        mEdit1 = (EditText) findViewById(R.id.f1);
+        mEdit2 = (EditText) findViewById(R.id.f2);
+        mEdit3 = (EditText) findViewById(R.id.f3);
+        mEdit4 = (EditText) findViewById(R.id.f4);
+        mEdit5 = (EditText) findViewById(R.id.f5);
+        Result = (EditText) findViewById(R.id.res);
+
+        s1 = mEdit1.getText().toString();
+        s2 = mEdit2.getText().toString();
+        s3 = mEdit3.getText().toString();
+        s4= mEdit4.getText().toString();
+        s5 = mEdit5.getText().toString();
+
+        if (s1.equals("O"))
+            t = t + 10;
+        else if (s1.equals("A+"))
+            t = t + 9 ;
+        else if (s1.equals("A"))
+            t = t + 8 ;
+        else if (s1.equals("B+"))
+            t = t + 7 ;
+        else if (s1.equals("B"))
+            t = t + 6 ;
+
+
+        if (s2.equals("O"))
+            t = t + 10 ;
+        else if (s2.equals("A+"))
+            t = t + 9 ;
+        else if (s2.equals("A"))
+            t = t + 8 ;
+        else if (s2.equals("B+"))
+            t = t + 7 ;
+        else if (s2.equals("B"))
+            t = t + 6 ;
+
+
+
+        if (s3.equals("O"))
+            t = t + 10 ;
+        else if (s3.equals("A+"))
+            t = t + 9 ;
+        else if (s3.equals("A"))
+            t = t + 8 ;
+        else if (s3.equals("B+"))
+            t = t + 7 ;
+        else if (s3.equals("B"))
+            t = t + 6 ;
+
+
+        if (s4.equals("O"))
+            t = t + 10 ;
+        else if (s4.equals("A+"))
+            t = t + 9 ;
+        else if (s4.equals("A"))
+            t = t + 8 ;
+        else if (s4.equals("B+"))
+            t = t + 7 ;
+        else if (s4.equals("B"))
+            t = t + 6 ;
+
+        if (s5.equals("O"))
+            t = t + 10 ;
+        else if (s5.equals("A+"))
+            t = t + 9 ;
+        else if (s5.equals("A"))
+            t = t + 8 ;
+        else if (s5.equals("B+"))
+            t = t + 7 ;
+        else if (s5.equals("B"))
+            t = t + 6 ;
+         if (s1.equals("C")||s2.equals("C")||s3.equals("C")||s4.equals("C")||s5.equals("C"))
+        {
+            Result.setText("fail");
+            return;
+        }
+
+
+        float f = (t *2)/ 10;
+        Result.setText(f+"");
+    }
+
+
+
+
+
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
+}
